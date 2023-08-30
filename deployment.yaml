@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mavenproject
+  labels:
+    app: mavenproject
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mavenproject
+  template:
+    metadata:
+      labels:
+        app: mavenproject
+    spec:
+      containers:
+      - name: springboot-container
+        image: nagarajubeee/itheadsimage:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080         
