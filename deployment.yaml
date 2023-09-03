@@ -15,8 +15,8 @@ spec:
         app: mavenproject
     spec:
       containers:
-      - name: springboot-container
-        image: nagarajubeee/itheadsimage:latest
+      - name: mavencontainer
+        image: nagarajubeee/mavenproject:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080         
